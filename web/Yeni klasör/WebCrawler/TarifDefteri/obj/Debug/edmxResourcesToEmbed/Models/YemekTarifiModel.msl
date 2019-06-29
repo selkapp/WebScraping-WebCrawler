@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="YemekTarifiModelStoreContainer" CdmEntityContainer="YemekTarifiEntities">
+    <EntitySetMapping Name="TARIF">
+      <EntityTypeMapping TypeName="YemekTarifiModel.TARIF">
+        <MappingFragment StoreEntitySet="TARIF">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="SITE_ADI" ColumnName="SITE_ADI" />
+          <ScalarProperty Name="YEMEK_ADI" ColumnName="YEMEK_ADI" />
+          <ScalarProperty Name="RESIM" ColumnName="RESIM" />
+          <ScalarProperty Name="MALZEMELER" ColumnName="MALZEMELER" />
+          <ScalarProperty Name="HAZIRLANIS" ColumnName="HAZIRLANIS" />
+          <ScalarProperty Name="KATEGORI" ColumnName="KATEGORI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_getSearchResults" FunctionName="YemekTarifiModel.Store.sp_getSearchResults">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="YemekTarifiModel.sp_getSearchResults_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RANK" ColumnName="RANK" />
+          <ScalarProperty Name="RESIM" ColumnName="RESIM" />
+          <ScalarProperty Name="SITE_ADI" ColumnName="SITE_ADI" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="YEMEK_ADI" ColumnName="YEMEK_ADI" />
+          <ScalarProperty Name="OZET" ColumnName="OZET" />
+          <ScalarProperty Name="KATEGORI" ColumnName="KATEGORI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

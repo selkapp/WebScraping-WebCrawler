@@ -1,0 +1,20 @@
+c:\users\dursu\documents\visual studio 2015\Projects\WebCrawler\WebCrawler\bin\Debug\WebCrawler.exe.config
+c:\users\dursu\documents\visual studio 2015\Projects\WebCrawler\WebCrawler\bin\Debug\WebCrawler.exe
+c:\users\dursu\documents\visual studio 2015\Projects\WebCrawler\WebCrawler\bin\Debug\WebCrawler.pdb
+c:\users\dursu\documents\visual studio 2015\Projects\WebCrawler\WebCrawler\obj\Debug\WebCrawler.csprojResolveAssemblyReference.cache
+c:\users\dursu\documents\visual studio 2015\Projects\WebCrawler\WebCrawler\obj\Debug\WebCrawler.exe
+c:\users\dursu\documents\visual studio 2015\Projects\WebCrawler\WebCrawler\obj\Debug\WebCrawler.pdb
+c:\users\dursu\documents\visual studio 2015\Projects\WebCrawler\WebCrawler\bin\Debug\HtmlAgilityPack.dll
+c:\users\dursu\documents\visual studio 2015\Projects\WebCrawler\WebCrawler\bin\Debug\HtmlAgilityPack.pdb
+c:\users\dursu\documents\visual studio 2015\Projects\WebCrawler\WebCrawler\bin\Debug\HtmlAgilityPack.xml
+C:\Users\cigde\OneDrive\Masaüstü\Yeni klasör\WebCrawler\WebCrawler\bin\Debug\WebCrawler.exe.config
+C:\Users\cigde\OneDrive\Masaüstü\Yeni klasör\WebCrawler\WebCrawler\bin\Debug\WebCrawler.exe
+C:\Users\cigde\OneDrive\Masaüstü\Yeni klasör\WebCrawler\WebCrawler\bin\Debug\WebCrawler.pdb
+C:\Users\cigde\OneDrive\Masaüstü\Yeni klasör\WebCrawler\WebCrawler\bin\Debug\HtmlAgilityPack.dll
+C:\Users\cigde\OneDrive\Masaüstü\Yeni klasör\WebCrawler\WebCrawler\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\cigde\OneDrive\Masaüstü\Yeni klasör\WebCrawler\WebCrawler\bin\Debug\HtmlAgilityPack.xml
+C:\Users\cigde\OneDrive\Masaüstü\Yeni klasör\WebCrawler\WebCrawler\obj\Debug\WebCrawler.csprojAssemblyReference.cache
+C:\Users\cigde\OneDrive\Masaüstü\Yeni klasör\WebCrawler\WebCrawler\obj\Debug\WebCrawler.csproj.CoreCompileInputs.cache
+C:\Users\cigde\OneDrive\Masaüstü\Yeni klasör\WebCrawler\WebCrawler\obj\Debug\WebCrawler.csproj.CopyComplete
+C:\Users\cigde\OneDrive\Masaüstü\Yeni klasör\WebCrawler\WebCrawler\obj\Debug\WebCrawler.exe
+C:\Users\cigde\OneDrive\Masaüstü\Yeni klasör\WebCrawler\WebCrawler\obj\Debug\WebCrawler.pdb

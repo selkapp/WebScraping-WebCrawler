@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="YemekTarifiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TARIF">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="64" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="URL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SITE_ADI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="YEMEK_ADI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RESIM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MALZEMELER" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="HAZIRLANIS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KATEGORI" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="YemekTarifiEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TARIF" EntityType="Self.TARIF" />
+    <FunctionImport Name="sp_getSearchResults" ReturnType="Collection(YemekTarifiModel.sp_getSearchResults_Result)">
+      <Parameter Name="search_param" Mode="In" Type="String" />
+      <Parameter Name="search_type" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_getSearchResults_Result">
+    <Property Type="String" Name="ID" Nullable="true" MaxLength="64" />
+    <Property Type="Int32" Name="RANK" Nullable="true" />
+    <Property Type="String" Name="RESIM" Nullable="true" />
+    <Property Type="String" Name="SITE_ADI" Nullable="false" />
+    <Property Type="String" Name="URL" Nullable="false" />
+    <Property Type="String" Name="YEMEK_ADI" Nullable="false" />
+    <Property Type="String" Name="OZET" Nullable="true" />
+    <Property Type="String" Name="KATEGORI" Nullable="true" MaxLength="255" />
+  </ComplexType>
+</Schema>

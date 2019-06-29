@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="icon" href="/asset/img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link rel="stylesheet" href="/asset/css/style.css?v=1.0">
+</head>
+<body>
+    <div class="search-result-header">
+        <a href="/" class="main">
+            <img src="/asset/img/tarif-defterim-logo-2.png" alt="" />
+        </a>
+        <div class="seach-engine-textbox">
+
+            <form action="/defterim" onSubmit="return seachSubmitControl()">
+                <input type="text" id="search" name="search" placeholder="Tarif arayın (Örn;süt, beşamel soslu tavuk, akşam yemeği)" value="@ViewBag.SeachParameter" autocomplete="off" />
+                <input type="hidden" name="type" value="@ViewBag.SeachType" />
+                <input type="submit" class="search-button" value="deftere bak!" />
+            </form>
+        </div>
+        <div class="clear-fix"></div>
+        <div class="seach-engine-type-content">
+            <ul>
+                <li class="@(((ViewBag.SeachType == "" || ViewBag.SeachType == "tumu") ? "search-type-active" : "" ))"><a href="/defterim?search=@ViewBag.SeachParameter">Tümü</a></li>
+                <li class="@((ViewBag.SeachType == "kategori") ? "search-type-active" : "" )"><a href="/defterim?search=@ViewBag.SeachParameter&type=kategori">Kategori</a></li>
+                <li class="@((ViewBag.SeachType == "site") ? "search-type-active" : "" )"><a href="/defterim?search=@ViewBag.SeachParameter&type=site">Site</a></li>
+            </ul>
+        </div>
+        <div class="clear-fix"></div>
+    </div>
+
+    @RenderBody()
+
+    <script src="/asset/scripts/tarifdefterim.js?v=1.0"></script>
+
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
+

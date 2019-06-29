@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="YEMEK_TARIFI" Class="DataClasses2DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-V8G59AC;Initial Catalog=YEMEK_TARIFI;Integrated Security=True" SettingsObjectName="WebCrawler.Properties.Settings" SettingsPropertyName="YEMEK_TARIFIConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TARIF" Member="TARIFs">
+    <Type Name="TARIF">
+      <Column Name="ID" Type="System.String" DbType="NChar(64) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="URL" Type="System.String" DbType="NChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="SITE_ADI" Type="System.String" DbType="NChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="YEMEK_ADI" Type="System.String" DbType="NChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="RESIM" Type="System.String" DbType="NChar(256)" CanBeNull="true" />
+      <Column Name="MALZEMELER" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="HAZIRLANIS" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VISITED_URLS" Member="VISITED_URLs">
+    <Type Name="VISITED_URL">
+      <Column Name="ID" Type="System.String" DbType="NChar(64)" CanBeNull="true" />
+      <Column Name="URL" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,72 @@
+﻿
+@{
+    TarifDefteri.Models.TARIF tarif = ViewBag.tarif;
+
+    string search_param = ViewBag.search;
+    string type = ViewBag.type;
+
+    ViewBag.Title = tarif.YEMEK_ADI;
+    ViewBag.SeachParameter = search_param;
+    ViewBag.SeachType = type;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+    List<string> malzemeler = new List<string>();
+
+    if (tarif.MALZEMELER.IndexOf('|') == -1)
+    {
+        malzemeler.Add(tarif.MALZEMELER);
+    }
+    else
+    {
+        foreach (var item in tarif.MALZEMELER.Split('|'))
+        {
+            malzemeler.Add(item);
+        }
+    }
+
+    List<string> hazizlanis = new List<string>();
+
+    if (tarif.HAZIRLANIS.IndexOf('|') == -1)
+    {
+        hazizlanis.Add(tarif.HAZIRLANIS);
+    }
+    else
+    {
+        foreach (var item in tarif.HAZIRLANIS.Split('|'))
+        {
+            hazizlanis.Add(item);
+        }
+    }
+}
+<div class="search-result-detail-content">
+    <p><b><a href="/defterim?search=@tarif.KATEGORI&type=kategori">@Html.Raw(tarif.KATEGORI)</a></b> > @Html.Raw(tarif.YEMEK_ADI)</p>
+    <h3>@Html.Raw(tarif.YEMEK_ADI)</h3>
+    <div class="search-result-detail-img-content">
+        <img src="@tarif.RESIM" alt="" />
+    </div>
+    <h4>Malzemeler</h4>
+    <div>
+        <ul>
+            @foreach (var item in malzemeler)
+            {
+                <li> @Html.Raw(item) </li>
+            }
+        </ul>
+    </div>
+    <h4>Hazırlanış</h4>
+    <div>
+        <ul>
+            @foreach (var item in hazizlanis)
+            {
+                <li> @Html.Raw(item) </li>
+            }
+        </ul>
+    </div>
+    <div>
+        <b>Kaynak : </b><span class="result-source">@tarif.URL</span>
+    </div>
+</div>
+
+
+

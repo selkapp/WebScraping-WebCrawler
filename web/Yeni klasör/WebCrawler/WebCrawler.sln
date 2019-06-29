@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCrawler", "WebCrawler\WebCrawler.csproj", "{E8FE6878-A51D-43E0-8D87-D037972E62BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TarifDefteri", "TarifDefteri\TarifDefteri.csproj", "{5A929C59-4526-4D47-85B4-7D5CA2A62064}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8FE6878-A51D-43E0-8D87-D037972E62BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8FE6878-A51D-43E0-8D87-D037972E62BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8FE6878-A51D-43E0-8D87-D037972E62BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8FE6878-A51D-43E0-8D87-D037972E62BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A929C59-4526-4D47-85B4-7D5CA2A62064}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A929C59-4526-4D47-85B4-7D5CA2A62064}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A929C59-4526-4D47-85B4-7D5CA2A62064}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A929C59-4526-4D47-85B4-7D5CA2A62064}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B4C1A21-FE94-4CF7-9D1E-56FFAB88F849}
+	EndGlobalSection
+EndGlobal

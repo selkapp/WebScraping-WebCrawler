@@ -1,0 +1,85 @@
+﻿
+@{
+
+    string search_param = ViewBag.search;
+    int page = ViewBag.page;
+    double page_duration = ViewBag.page_duration;
+    int total_result = ViewBag.total_result;
+    int page_count = ViewBag.page_count;
+    List<TarifDefteri.Models.SearchResult> searchResults = ViewBag.searchResults;
+    string type = ViewBag.type;
+
+    ViewBag.Title = search_param + ", Defterimde Ara";
+    ViewBag.SeachParameter = search_param;
+    ViewBag.SeachType = type;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (search_param != "")
+{
+
+    <div class="search-result-content">
+
+        <p>@total_result sonuç bulundu (@(page_duration.ToString("0.##")) sn)</p>
+
+        @foreach (var item in searchResults.OrderByDescending(c => c.RANK).ToList())
+        {
+
+            <div class="result-body">
+                <div class="result-image">
+                    <a href="/tarifim?id=@item.ID.Trim()&search=@search_param&type=@type">
+                        <img src="@item.RESIM" alt="" />
+                    </a>
+                </div>
+                <div class="result-content">
+                    <a href="/tarifim?id=@item.ID.Trim()&search=@search_param&type=@type">
+                        <h3>@Html.Raw(item.YEMEK_ADI)</h3>
+                        <span>Kaynak : </span><span class="result-source">@item.URL</span>
+                    </a><br />
+
+                    <span>Kategori : </span><a class="category-link" href="/defterim?search=@item.KATEGORI&type=kategori">@Html.Raw(item.KATEGORI)</a>
+                    <span> Site : </span><a class="category-link" href="/defterim?search=@item.SITE_ADI&type=site">@Html.Raw(item.SITE_ADI)</a><br />
+                    
+                    <p>@Html.Raw(item.OZET)...</p>
+                </div>
+                <div class="clear-fix"></div>
+            </div>
+        }
+    </div>
+    <div class="clear-fix"></div>
+    <div class="search-result-pager">
+        <ul>
+            @if (page > 10)
+            {
+
+                <li class="back"><a href="/defterim?search=@search_param&page=@(((Math.Ceiling((decimal)page / (decimal)10) - 1) * 10))&type=@type"><< Geri</a></li>
+            }
+
+            @{
+                int paging_indeks = 0;
+                int paging_indeks_max = 0;
+                if (page > 10) { paging_indeks = (((page - 1) / 10) * 10); }
+                paging_indeks_max = paging_indeks + 10;
+                if (paging_indeks_max > page_count) { paging_indeks_max = page_count; }
+            }
+
+            @for (int i = paging_indeks; i < paging_indeks_max; i++)
+            {
+                if (page == i + 1)
+                {
+                    <li><a class="active" href="/defterim?search=@search_param&page=@(i+1)&type=@type">@(i + 1)</a></li>
+                }
+                else
+                {
+                    <li><a href="/defterim?search=@search_param&page=@(i+1)&type=@type">@(i + 1)</a></li>
+                }
+            }
+            @if (page + 10 <= page_count)
+            {
+                <li class="next"><a href="/defterim?search=@search_param&page=@(((Math.Ceiling((decimal)page / (decimal)10)) * 10) +1)&type=@type">İleri >></a></li>
+            }
+        </ul>
+        <div class="cleared"></div>
+    </div>
+    <div class="clear-fix"></div>
+}

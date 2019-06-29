@@ -1,0 +1,27 @@
+USE [YEMEK_TARIFI]
+GO
+
+/****** Object:  Table [dbo].[TARIF]    Script Date: 30.12.2018 22:53:26 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[TARIF](
+	[ID] [nchar](64) NOT NULL,
+	[URL] [nvarchar](max) NOT NULL,
+	[SITE_ADI] [nvarchar](max) NOT NULL,
+	[YEMEK_ADI] [nvarchar](max) NOT NULL,
+	[RESIM] [nvarchar](max) NULL,
+	[MALZEMELER] [nvarchar](max) NOT NULL,
+	[HAZIRLANIS] [nvarchar](max) NOT NULL,
+ CONSTRAINT [PK_TARIF] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+

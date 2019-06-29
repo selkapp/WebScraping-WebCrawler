@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="YemekTarifiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TARIF">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nchar" MaxLength="64" Nullable="false" />
+    <Property Name="URL" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SITE_ADI" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="YEMEK_ADI" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="RESIM" Type="nvarchar(max)" />
+    <Property Name="MALZEMELER" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="HAZIRLANIS" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="KATEGORI" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <Function Name="sp_getSearchResults" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="search_param" Type="nvarchar" Mode="In" />
+    <Parameter Name="search_type" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="YemekTarifiModelStoreContainer">
+    <EntitySet Name="TARIF" EntityType="Self.TARIF" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

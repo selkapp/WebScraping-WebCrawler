@@ -1,0 +1,252 @@
+﻿body,html {
+    margin:0px;
+    padding:0px;
+    background-color:#fff;
+}
+.clear-fix{
+    clear:both;
+}
+.seach-engine-main{
+    width:750px;
+    position:absolute;
+    margin-left:-375px;
+    left:50%;
+    margin-top:-81px;
+    top:33%;
+    padding-top:200px;
+    background-image:url('/asset/img/tarif-defterim-logo.png');
+    background-position:center top;
+    background-repeat:no-repeat;
+}
+.seach-engine-textbox {
+    position:relative;
+    height:44px;
+    border-width: 0px;
+    border-color: #CCCCCC;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-style: solid;
+    border-radius: 50px;
+    box-shadow: 0px 0px 13px rgba(185,185,185,.27);
+    text-shadow: 0px 0px 0px rgba(0,0,0,.25);
+}
+.seach-engine-textbox input[type="text"]{
+    position: absolute;
+    height: 24px;
+    line-height: 24px;
+    padding: 0px;
+    margin: 0px;
+    width: 600px;
+    top:10px;
+    left:20px;
+    border-style: none;
+    border-width: 0px;
+    font-size: 14px;
+	font-family:'Comfortaa', cursive;
+}
+.seach-engine-textbox input[type="text"]:focus {
+     outline:none;
+}
+
+.seach-engine-textbox input[type="text"]::placeholder
+{
+    font-style:italic;
+    color:#d3d3d3;
+}
+.search-button {
+    position: absolute;
+    top:0px;
+    right:0px;
+	background-color:#ff7373;
+	-moz-border-radius:22px;
+	-webkit-border-radius:22px;
+	border-radius:22px;
+    height:44px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'Comfortaa', cursive;
+    font-size: 14px;
+	text-decoration:none;
+    border-style: none;
+    border-width: 0px;
+    padding:0px 20px;
+}
+.search-button:hover {
+	background-color:#f95353;
+}
+.search-button:focus {
+     outline:none;
+}
+.search-result-header {
+    width: 100%;
+    height: auto;
+    padding-top: 18px;
+    border-bottom-style: ridge;
+    border-bottom-width: 1px;
+}
+    .search-result-header a {
+        margin: 6px 18px;
+        display: inline-block;
+        float: left;
+    }
+    .search-result-header img {
+        height: 26px;
+        width: 221px;
+    }
+.search-result-header .seach-engine-textbox {
+    width: 750px;
+    float:left;
+}
+.seach-engine-type-content {
+    padding-top: 18px;
+    padding-left: 259px;
+}
+.seach-engine-type-content ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+    .seach-engine-type-content ul li a {
+        font-family: 'Comfortaa', cursive;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: bold;
+        color: #0000ee;
+    }
+    .seach-engine-type-content ul li.search-type-active a {
+        border-bottom-style: inset;
+        border-bottom-color: #0000ee;
+        border-bottom-width:2px;
+    }
+.search-result-content {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 257px;
+    width: 750px;
+}
+    .search-result-content p {
+        font-family: 'Comfortaa', cursive;
+        color: #757575;
+        font-size: 12px;
+    }
+    .result-image {
+        width: 150px;
+        float: left;
+    }
+    .result-image img{
+        width:132px;
+    }
+
+    .result-content {
+        float: left;
+        width: 600px;
+        font-family: 'Comfortaa', cursive;
+    }
+    .result-content a {
+        text-decoration: none;
+        font-size: 16px;
+        color: #0000ee;
+    }
+        .result-content a h3 {
+            margin: 0px;
+            padding: 0px;
+        }
+        .result-content a h3:hover {
+            color: #ff7373;
+        }
+        .result-content a span {
+            font-size: 14px;
+            color: #000000;
+        }
+        .result-content span {
+            font-size: 14px;
+        }
+            .result-content a span.result-source {
+                font-size: 14px;
+                color: #006621;
+            }
+a.category-link {
+    font-size: 14px;
+    color: #0000ee;
+}
+    .result-content p {
+        margin:18px 0px;
+        text-decoration: none;
+        font-size: 14px;
+        color: #757575;
+    }
+
+.search-result-pager {
+    padding-top: 18px;
+    height:50px;
+    padding-left: 257px;
+    width: 750px;
+}
+.search-result-pager ul{
+    margin:0px;
+    padding:0px;
+    list-style:none;
+}
+.search-result-pager ul li{
+    float:left;
+    margin-right:5px;
+}
+    .search-result-pager ul li.back {
+        margin-right: 10px;
+    }
+    .search-result-pager ul li.next {
+        margin-left: 5px;
+    }
+    .search-result-pager ul li a {
+        text-decoration: none;
+        font-family: 'Comfortaa', cursive;
+        font-size: 16px;
+        color: #0000ee;
+    }
+        .search-result-pager ul li a:hover {
+            color: #ff7373;
+        }
+        .search-result-pager ul li a.active {
+            color: #ff7373;
+            text-decoration: underline;
+        }
+
+.search-result-detail-content {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 257px;
+    width: 750px;
+}
+.search-result-detail-img-content {
+    width: 600px;
+}
+.search-result-detail-img-content img{
+    max-width:600px;
+}
+.search-result-detail-content h3, .search-result-detail-content h4 {
+    font-family: 'Comfortaa', cursive;
+    color: #ff7373;
+}
+
+.search-result-detail-content h3 {
+    font-size: 24px;
+}
+.search-result-detail-content h4 {
+    font-size: 18px;
+}
+.search-result-detail-content {
+    font-family: 'Comfortaa', cursive;
+    font-size: 16px;
+}
+.search-result-detail-content span.result-source {
+    font-size: 14px;
+    color: #006621;
+}
+    .search-result-detail-content p, .search-result-detail-content p a {
+        font-family: 'Comfortaa', cursive;
+        color: #757575;
+        font-size: 14px;
+        font-style: italic;
+        text-decoration:none;
+    }

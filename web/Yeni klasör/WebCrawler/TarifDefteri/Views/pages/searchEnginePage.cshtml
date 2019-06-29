@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Tarif Defterim</title>
+    <link rel="icon" href="/asset/img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet" />
+    <link rel="stylesheet" href="/asset/css/style.css?v=1.0" />
+
+</head>
+<body>
+    <div class="seach-engine-main">
+        <div class="seach-engine-textbox">
+            <form action="/defterim" onSubmit="return seachSubmitControl()">
+                <input type="text" id="search" name="search" placeholder="Tarif arayın (Örn;süt, beşamel soslu tavuk, akşam yemeği)" autocomplete="off" />
+                <input type="submit" class="search-button" value="deftere bak!" />
+            </form>
+        </div>
+    </div>
+
+    <script src="/asset/scripts/tarifdefterim.js?v=1.0"></script>
+</body>
+</html>
